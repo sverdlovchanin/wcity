@@ -25,7 +25,10 @@ SECRET_KEY = 'ar($o!o&nd)v)*9^2@74a_&112=cxorjc7lma40=%wd-$qhfa-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+	"127.0.0.1",
+	"0.0.0.0",
+]
 
 
 # Application definition
@@ -37,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'fenster',
+	'freeaddr',
 ]
 
 MIDDLEWARE = [
@@ -73,11 +78,15 @@ WSGI_APPLICATION = 'wcity.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+from pgpass_helper import read_pgpass
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    
+	'default': read_pgpass('wcity'),	
+	# 'default': {
+    	#'ENGINE': 'django.db.backends.sqlite3',
+    	# 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),	
+	# }
 }
 
 
