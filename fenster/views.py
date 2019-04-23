@@ -28,6 +28,7 @@ def buy(request, fenster_id):
 	f.status_of_object = False
 	f.save()
 
+@login_required
 def sell(request):
 # Sell a new Fenster.
 	if request.method == "POST":
