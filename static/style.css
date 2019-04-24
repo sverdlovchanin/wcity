@@ -1,0 +1,21 @@
+body{
+		background-color: #480048;
+	}
+table{
+		background-color: #cccccc;
+		border-color: #cccccc;
+	}
+
+#fenster_whole13{
+		color: #ff0000;
+	}
+
+.fenster{
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+
+input:checked + label {
+		color: #000050;
+		font-weight: bold;
+		}

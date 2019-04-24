@@ -1,3 +1,6 @@
+{% load static %}
+<link rel="stylesheet" href={% static 'style.css' %} />
+
 {% include 'fenster/base.html' %}
 
 <h1>Das fenster</h1>
@@ -6,8 +9,9 @@
 {% csrf_token %}
 {% for afenster in fenster_list %}
 {% if afenster.status_of_object %}
-<table border="6">
-  <tr height="50px">
+{% load static %}
+<table border="6" background="{% static 'city.jpg' %}" style="width:500px" class="fenster">
+  <tr height="100px">
     <td colspan="2">
 		
 			Ширина: {{afenster.fenster_width}}
@@ -37,7 +41,8 @@
 		</label>
     </td>
   </tr>
-<tr height="25px"><td></td><td></td></tr>
+<tr height="100px">
+	<td></td><td></td></tr>
 </table>
 {% endif %}
 {% endfor %}

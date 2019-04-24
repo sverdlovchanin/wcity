@@ -2,6 +2,7 @@ from django.shortcuts import render
 from random import randint
 from .models import Fenster
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
 
 def index(request):
 	# test_creation()
@@ -27,6 +28,24 @@ def buy(request, fenster_id):
 	f = Fenster.objects.get(pk=fenster_id)
 	f.status_of_object = False
 	f.save()
+	if request.method == "POST":
+		f = Fenster.objects.get(
+			pk=request.POST['selected_fenster']
+		)
+		f.for_rent=False
+		f.save()
+		print("from: %s " % ('462243@e1.ru', ))
+		send_mail(
+			subject='Fenster was sold',
+			message='Fenster #%i was sold.' % f.id,
+			from_email='*@e1.ru',
+			recipient_list=['*@mail.ru'],
+			auth_user="*",
+			auth_password=yapass,
+			fail_silently=False,
+		)
+	return HttpResponseRedirect("/fenster")
+	
 
 @login_required
 def sell(request):
