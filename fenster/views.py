@@ -3,6 +3,7 @@ from random import randint
 from .models import Fenster
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
+from .pss import yapass
 
 def index(request):
 	# test_creation()
@@ -34,13 +35,13 @@ def buy(request, fenster_id):
 		)
 		f.for_rent=False
 		f.save()
-		print("from: %s " % ('462243@e1.ru', ))
+		print("from: %s " % ('*@e1.ru', ))
 		send_mail(
 			subject='Fenster was sold',
 			message='Fenster #%i was sold.' % f.id,
 			from_email='*@e1.ru',
 			recipient_list=['*@mail.ru'],
-			auth_user="*",
+			auth_user="*@e1.ru",
 			auth_password=yapass,
 			fail_silently=False,
 		)
