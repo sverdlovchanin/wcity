@@ -1,0 +1,80 @@
+(0.001) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "fenster_fenster"."id", "fenster_fenster"."fenster_width", "fenster_fenster"."fenster_height", "fenster_fenster"."fenster_scheme", "fenster_fenster"."window_view", "fenster_fenster"."latitude", "fenster_fenster"."longitude", "fenster_fenster"."altitude", "fenster_fenster"."price", "fenster_fenster"."status_of_object" FROM "fenster_fenster" ORDER BY "fenster_fenster"."id" ASC  LIMIT 1; args=()
+(0.001) SELECT "fenster_fenster"."id", "fenster_fenster"."fenster_width", "fenster_fenster"."fenster_height", "fenster_fenster"."fenster_scheme", "fenster_fenster"."window_view", "fenster_fenster"."latitude", "fenster_fenster"."longitude", "fenster_fenster"."altitude", "fenster_fenster"."price", "fenster_fenster"."status_of_object" FROM "fenster_fenster" ORDER BY "fenster_fenster"."id" ASC; args=()
+(0.000) SELECT "fenster_fenster"."id", "fenster_fenster"."fenster_width", "fenster_fenster"."fenster_height", "fenster_fenster"."fenster_scheme", "fenster_fenster"."window_view", "fenster_fenster"."latitude", "fenster_fenster"."longitude", "fenster_fenster"."altitude", "fenster_fenster"."price", "fenster_fenster"."status_of_object" FROM "fenster_fenster" WHERE "fenster_fenster"."id" = 127; args=(127,)
+(0.002) UPDATE "fenster_fenster" SET "fenster_width" = 100, "fenster_height" = 100, "fenster_scheme" = '1,2', "window_view" = '', "latitude" = 1.0, "longitude" = 1.0, "altitude" = 1.0, "price" = 1.0, "status_of_object" = false WHERE "fenster_fenster"."id" = 127; args=(100, 100, '1,2', '', 1.0, 1.0, 1.0, 1.0, False, 127)
+(0.000) SELECT "fenster_fenster"."id", "fenster_fenster"."fenster_width", "fenster_fenster"."fenster_height", "fenster_fenster"."fenster_scheme", "fenster_fenster"."window_view", "fenster_fenster"."latitude", "fenster_fenster"."longitude", "fenster_fenster"."altitude", "fenster_fenster"."price", "fenster_fenster"."status_of_object" FROM "fenster_fenster" WHERE "fenster_fenster"."id" = 127; args=(127,)
+(0.000) UPDATE "fenster_fenster" SET "fenster_width" = 100, "fenster_height" = 100, "fenster_scheme" = '1,2', "window_view" = '', "latitude" = 1.0, "longitude" = 1.0, "altitude" = 1.0, "price" = 1.0, "status_of_object" = false WHERE "fenster_fenster"."id" = 127; args=(100, 100, '1,2', '', 1.0, 1.0, 1.0, 1.0, False, 127)
+(0.000) SELECT "fenster_fenster"."id", "fenster_fenster"."fenster_width", "fenster_fenster"."fenster_height", "fenster_fenster"."fenster_scheme", "fenster_fenster"."window_view", "fenster_fenster"."latitude", "fenster_fenster"."longitude", "fenster_fenster"."altitude", "fenster_fenster"."price", "fenster_fenster"."status_of_object" FROM "fenster_fenster" ORDER BY "fenster_fenster"."id" ASC; args=()
+"POST /fenster/ HTTP/1.1" 200 2698
+(0.001) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "fenster_fenster"."id", "fenster_fenster"."fenster_width", "fenster_fenster"."fenster_height", "fenster_fenster"."fenster_scheme", "fenster_fenster"."window_view", "fenster_fenster"."latitude", "fenster_fenster"."longitude", "fenster_fenster"."altitude", "fenster_fenster"."price", "fenster_fenster"."status_of_object" FROM "fenster_fenster" ORDER BY "fenster_fenster"."id" ASC  LIMIT 1; args=()
+(0.000) SELECT "fenster_fenster"."id", "fenster_fenster"."fenster_width", "fenster_fenster"."fenster_height", "fenster_fenster"."fenster_scheme", "fenster_fenster"."window_view", "fenster_fenster"."latitude", "fenster_fenster"."longitude", "fenster_fenster"."altitude", "fenster_fenster"."price", "fenster_fenster"."status_of_object" FROM "fenster_fenster" ORDER BY "fenster_fenster"."id" ASC; args=()
+(0.000) SELECT "fenster_fenster"."id", "fenster_fenster"."fenster_width", "fenster_fenster"."fenster_height", "fenster_fenster"."fenster_scheme", "fenster_fenster"."window_view", "fenster_fenster"."latitude", "fenster_fenster"."longitude", "fenster_fenster"."altitude", "fenster_fenster"."price", "fenster_fenster"."status_of_object" FROM "fenster_fenster" WHERE "fenster_fenster"."id" = 76; args=(76,)
+(0.000) UPDATE "fenster_fenster" SET "fenster_width" = 100, "fenster_height" = 100, "fenster_scheme" = '1,2', "window_view" = '3', "latitude" = 55.46, "longitude" = 1.0, "altitude" = 1.0, "price" = 1.0, "status_of_object" = false WHERE "fenster_fenster"."id" = 76; args=(100, 100, '1,2', '3', 55.46, 1.0, 1.0, 1.0, False, 76)
+(0.000) SELECT "fenster_fenster"."id", "fenster_fenster"."fenster_width", "fenster_fenster"."fenster_height", "fenster_fenster"."fenster_scheme", "fenster_fenster"."window_view", "fenster_fenster"."latitude", "fenster_fenster"."longitude", "fenster_fenster"."altitude", "fenster_fenster"."price", "fenster_fenster"."status_of_object" FROM "fenster_fenster" WHERE "fenster_fenster"."id" = 76; args=(76,)
+(0.000) UPDATE "fenster_fenster" SET "fenster_width" = 100, "fenster_height" = 100, "fenster_scheme" = '1,2', "window_view" = '3', "latitude" = 55.46, "longitude" = 1.0, "altitude" = 1.0, "price" = 1.0, "status_of_object" = false WHERE "fenster_fenster"."id" = 76; args=(100, 100, '1,2', '3', 55.46, 1.0, 1.0, 1.0, False, 76)
+(0.002) SELECT "fenster_fenster"."id", "fenster_fenster"."fenster_width", "fenster_fenster"."fenster_height", "fenster_fenster"."fenster_scheme", "fenster_fenster"."window_view", "fenster_fenster"."latitude", "fenster_fenster"."longitude", "fenster_fenster"."altitude", "fenster_fenster"."price", "fenster_fenster"."status_of_object" FROM "fenster_fenster" ORDER BY "fenster_fenster"."id" ASC; args=()
+"POST /fenster/ HTTP/1.1" 200 2132
+(0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()

@@ -4,6 +4,9 @@ from .models import Fenster
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from .pss import yapass
+import logging
+
+logger = logging.getLogger(__name__+'.log')
 
 def index(request):
 	# test_creation()
@@ -35,6 +38,7 @@ def buy(request, fenster_id):
 		)
 		f.for_rent=False
 		f.save()
+		logger.info('Fenster #%s was sold' %(request.POST['selected_fenster']))
 		print("from: %s " % ('*@e1.ru', ))
 		send_mail(
 			subject='Fenster was sold',

@@ -140,3 +140,22 @@ STATICFILES_FINDERS = (
 EMAIL_PORT = 465
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_USE_SSL = True
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'fenster/debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
